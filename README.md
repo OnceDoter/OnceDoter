@@ -1,12 +1,10 @@
 <h1 align="center">Hi 👋, I'm Paul</h1>
 <h3 align="center">Junior Asp.NET dev</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=oncedoter" alt="oncedoter" /> </p>
-
 <p align="left">
 <h3 align="left">Connect with me:</h3>
 <a href="https://instagram.com/@pavlikd271" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="@pavlikd271" height="30" width="40" /></a>
-<a href="https://vk.com/kreoliz" target="blank"><img align="center" src="https://cdn.iconscout.com/icon/free/png-512/vk-17-898037.png" alt="kreoliz" height="30" width="40" /></a>
+<a href="https://vk.com/kreoliz" target="blank"><img align="center" src="https://cdn.iconscout.com/icon/free/png-512/vk-17-898037.png" alt="kreoliz" height="40" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>

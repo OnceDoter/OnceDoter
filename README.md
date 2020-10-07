@@ -1,4 +1,4 @@
-<img src="https://sdtimes.com/wp-content/uploads/2014/09/0919.sdt-github.giff" width="100" height="100" />
+![](https://sdtimes.com/wp-content/uploads/2014/09/0919.sdt-github.gif | width=100)
 <h3 align="center">Junior Asp.NET dev</h3>
 
 <p align="left">

@@ -1,11 +1,39 @@
-<h3 align="center">Junior Asp.NET dev</h3>
+# Portfolio of tasks
+## 'Loymax' a. 3 years experience
+> Loymax - loyalty program management and marketing communications automation platform for retail chains
+1.  Integration of Quartz.net task scheduler as a Windows service. Implementation of the following features:
+    -   Default calendars (daily, weekly, etc.).
+    -   Ability to manually start and interrupt tasks.
+    -   Ability to pause recurring tasks.
+    -  User interface (UI).
 
-<p align="left">
-<h3 align="left">Connect with me:</h3>
-<a href="https://instagram.com/@pavlikd271" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="@pavlikd271" height="30" width="40" /></a>
-<a href="https://vk.com/kreoliz" target="blank"><img align="center" src="https://cdn.iconscout.com/icon/free/png-512/vk-17-898037.png" alt="kreoliz" height="40" width="40" /></a>
-</p>
+2.  Adding a `/health` route to all ASP.NET472 services for health checks and incorporating these checks into CI/CD pipelines after deployment (utilized Azure DevOps). 
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://dotnet.microsoft.com/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="https://www.oracle.com/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+3.  Optimization of hierarchical structures (product catalogs) based on `hierarchicallyId`. Later, implementation of pre-calculations and transition to the `table-closure` structure resulting in a computation increase of up to 15 times.
 
+4.  Target Audience Optimization (CRM). The main idea was to create a single entry for pre-calculation of target audiences. The client had to aggregate in itself all methods of interaction + results (client attributes).
+General information about customer attributes was presented in JSON format (cards, balance, purchases, favorite products, registrations, personalized offers, etc.). Client attributes were retrieved in one request. All target audiences were cached, which made it possible to check and match the target audience filters in the application's memory and determine which promotions should be applied.
+
+### Most Important Task. Event-source purchase History service
+1. Formulation of the problem:
+    -   The purchase has a pipeline. Conditionally: discount calculations + accrual of bonuses at least.
+    -   By that time, the number of purchases was more than int32.
+    -   Each historical record weighed 1.5kb.
+    -   The consumer did not have time to process the purchase history queue.
+    -   History needs to be constantly updated.
+
+2. Solve:
+    -   Batch consuming.
+    -   Event-source. To avoid long inserts and decisions about what to insert and what to update. Just bulk insert.
+    -   Non-relational representation of an entity. All information that is not needed for indexing is stored in the document view(.proto). 
+    -   Background gluing of records, to reduce memory.
+    -   Using flags to save all combinations of activity types and types of accruals or write-offs in a purchase.
+
+3. In total:
+    -   Reducing the occupied disk space of the database by 5 times.
+    -   Processing speed 12 thousand records per minute.
+    -   API fast. Because there are no joins and it is easy to get all the customer's purchases, with all the information in them (discounts, checking positions, accruals, etc.). 
+## 'AgroHistory' a. half years experience
+> Loymax - integrated automation  agricultural enterprise
+1.  Refactoring. Implementing soft delete everywhere.
+2. Optimization of vehicle tracks.

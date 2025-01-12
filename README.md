@@ -1,5 +1,4 @@
-# CV
-# Pavel Gordeev  
+# CV Pavel Gordeev  
 
 ### .NET C# | Backend Developer  
 
